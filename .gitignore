@@ -1,0 +1,15 @@
+build/*
+
+*~.nib
+*.swp
+
+.DS_Store
+
+*.mod1
+*.mode1v2
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
