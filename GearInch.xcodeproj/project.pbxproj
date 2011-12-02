@@ -14,10 +14,10 @@
 		1B4C54E71488730500288A15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54E61488730500288A15 /* main.m */; };
 		1B4C54EB1488730500288A15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54EA1488730500288A15 /* AppDelegate.m */; };
 		1B4C54EE1488730500288A15 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C54EC1488730500288A15 /* MainStoryboard.storyboard */; };
-		1B4C54F11488730500288A15 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54F01488730500288A15 /* FirstViewController.m */; };
+		1B4C54F11488730500288A15 /* GearsToRatioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54F01488730500288A15 /* GearsToRatioViewController.m */; };
 		1B4C54F31488730500288A15 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C54F21488730500288A15 /* first.png */; };
 		1B4C54F51488730500288A15 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C54F41488730500288A15 /* first@2x.png */; };
-		1B4C54F81488730500288A15 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54F71488730500288A15 /* SecondViewController.m */; };
+		1B4C54F81488730500288A15 /* RatioToGearsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C54F71488730500288A15 /* RatioToGearsViewController.m */; };
 		1B4C54FA1488730500288A15 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C54F91488730500288A15 /* second.png */; };
 		1B4C54FC1488730500288A15 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C54FB1488730500288A15 /* second@2x.png */; };
 		1B4C55041488730600288A15 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C55031488730600288A15 /* SenTestingKit.framework */; };
@@ -25,6 +25,11 @@
 		1B4C55061488730600288A15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C54DC1488730500288A15 /* Foundation.framework */; };
 		1B4C550E1488730600288A15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C550C1488730600288A15 /* InfoPlist.strings */; };
 		1B4C55111488730600288A15 /* GearInchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C55101488730600288A15 /* GearInchTests.m */; };
+		1B4C551B148874AA00288A15 /* Retina-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C551A148874AA00288A15 /* Retina-Icon.png */; };
+		1B4C551F1488755000288A15 /* Regular-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C551E1488755000288A15 /* Regular-Icon.png */; };
+		1B4C5527148875D100288A15 /* Launch-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C5526148875D100288A15 /* Launch-Icon.png */; };
+		1B4C5529148875DF00288A15 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C5528148875DF00288A15 /* Default@2x.png */; };
+		1B4C552B148875EC00288A15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C552A148875EC00288A15 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +54,12 @@
 		1B4C54E91488730500288A15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B4C54EA1488730500288A15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1B4C54ED1488730500288A15 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1B4C54EF1488730500288A15 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		1B4C54F01488730500288A15 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		1B4C54EF1488730500288A15 /* GearsToRatioViewController.h */ = {isa = PBXFileReference; path = GearsToRatioViewController.h; sourceTree = "<group>"; };
+		1B4C54F01488730500288A15 /* GearsToRatioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GearsToRatioViewController.m; sourceTree = "<group>"; };
 		1B4C54F21488730500288A15 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1B4C54F41488730500288A15 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		1B4C54F61488730500288A15 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		1B4C54F71488730500288A15 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		1B4C54F61488730500288A15 /* RatioToGearsViewController.h */ = {isa = PBXFileReference; path = RatioToGearsViewController.h; sourceTree = "<group>"; };
+		1B4C54F71488730500288A15 /* RatioToGearsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatioToGearsViewController.m; sourceTree = "<group>"; };
 		1B4C54F91488730500288A15 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		1B4C54FB1488730500288A15 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		1B4C55021488730600288A15 /* GearInchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GearInchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +68,11 @@
 		1B4C550D1488730600288A15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B4C550F1488730600288A15 /* GearInchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GearInchTests.h; sourceTree = "<group>"; };
 		1B4C55101488730600288A15 /* GearInchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GearInchTests.m; sourceTree = "<group>"; };
+		1B4C551A148874AA00288A15 /* Retina-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Retina-Icon.png"; sourceTree = "<group>"; };
+		1B4C551E1488755000288A15 /* Regular-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Regular-Icon.png"; sourceTree = "<group>"; };
+		1B4C5526148875D100288A15 /* Launch-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-Icon.png"; sourceTree = "<group>"; };
+		1B4C5528148875DF00288A15 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1B4C552A148875EC00288A15 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,8 @@
 		1B4C54CB1488730500288A15 = {
 			isa = PBXGroup;
 			children = (
+				1B4C552A148875EC00288A15 /* Default.png */,
+				1B4C5528148875DF00288A15 /* Default@2x.png */,
 				1B4C54E01488730500288A15 /* GearInch */,
 				1B4C55091488730600288A15 /* GearInchTests */,
 				1B4C54D91488730500288A15 /* Frameworks */,
@@ -122,15 +134,18 @@
 		1B4C54E01488730500288A15 /* GearInch */ = {
 			isa = PBXGroup;
 			children = (
+				1B4C5526148875D100288A15 /* Launch-Icon.png */,
+				1B4C551E1488755000288A15 /* Regular-Icon.png */,
+				1B4C551A148874AA00288A15 /* Retina-Icon.png */,
 				1B4C54E91488730500288A15 /* AppDelegate.h */,
 				1B4C54EA1488730500288A15 /* AppDelegate.m */,
 				1B4C54EC1488730500288A15 /* MainStoryboard.storyboard */,
-				1B4C54EF1488730500288A15 /* FirstViewController.h */,
-				1B4C54F01488730500288A15 /* FirstViewController.m */,
+				1B4C54EF1488730500288A15 /* GearsToRatioViewController.h */,
+				1B4C54F01488730500288A15 /* GearsToRatioViewController.m */,
 				1B4C54F21488730500288A15 /* first.png */,
 				1B4C54F41488730500288A15 /* first@2x.png */,
-				1B4C54F61488730500288A15 /* SecondViewController.h */,
-				1B4C54F71488730500288A15 /* SecondViewController.m */,
+				1B4C54F61488730500288A15 /* RatioToGearsViewController.h */,
+				1B4C54F71488730500288A15 /* RatioToGearsViewController.m */,
 				1B4C54F91488730500288A15 /* second.png */,
 				1B4C54FB1488730500288A15 /* second@2x.png */,
 				1B4C54E11488730500288A15 /* Supporting Files */,
@@ -244,6 +259,11 @@
 				1B4C54F51488730500288A15 /* first@2x.png in Resources */,
 				1B4C54FA1488730500288A15 /* second.png in Resources */,
 				1B4C54FC1488730500288A15 /* second@2x.png in Resources */,
+				1B4C551B148874AA00288A15 /* Retina-Icon.png in Resources */,
+				1B4C551F1488755000288A15 /* Regular-Icon.png in Resources */,
+				1B4C5527148875D100288A15 /* Launch-Icon.png in Resources */,
+				1B4C5529148875DF00288A15 /* Default@2x.png in Resources */,
+				1B4C552B148875EC00288A15 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +300,8 @@
 			files = (
 				1B4C54E71488730500288A15 /* main.m in Sources */,
 				1B4C54EB1488730500288A15 /* AppDelegate.m in Sources */,
-				1B4C54F11488730500288A15 /* FirstViewController.m in Sources */,
-				1B4C54F81488730500288A15 /* SecondViewController.m in Sources */,
+				1B4C54F11488730500288A15 /* GearsToRatioViewController.m in Sources */,
+				1B4C54F81488730500288A15 /* RatioToGearsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
