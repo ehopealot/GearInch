@@ -10,4 +10,8 @@
 
 @interface GearsToRatioViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIPickerView *sizePicker;
+@property (strong, nonatomic) IBOutlet UILabel *ratioLabel;
+
+
 @end

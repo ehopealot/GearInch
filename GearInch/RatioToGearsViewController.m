@@ -11,14 +11,6 @@
 @implementation RatioToGearsViewController
 @synthesize gearInchSelector, ratioList;
 
--(id)init{
-    self = [super init];
-    if (self){
-        data = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,11 +35,16 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (!data){
+        data = [NSMutableArray array];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.gearInchSelector selectRow:40 inComponent:0 animated:NO];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -62,8 +59,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return NO;
 }
 
 #pragma mark UIPickerViewDelegate
@@ -90,11 +86,12 @@
     int ratio = row+31;
     for (CGFloat cog = 11; cog <= 26; cog++){
         for (CGFloat chainwheel = 30; chainwheel <= 61; chainwheel ++){
-            if (abs(((chainwheel / cog) * 27 ) - ratio) < 1) {
-                [data addObject:[NSString stringWithFormat:@"%i x %i", cog, chainwheel]];
+            if (abs(((chainwheel / cog) * 27 ) - ratio) < .5) {
+                [data addObject:[NSString stringWithFormat:@"%i x %i", (int)chainwheel, (int)cog]];
             }
         }
     }
+    [ratioList reloadData];
 }
 
 #pragma mark UIPickerViewDataSource
@@ -124,6 +121,14 @@
     return data.count;
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.textLabel.text = [data objectAtIndex:indexPath.row];
+    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    cell.backgroundColor = [UIColor clearColor];
+    
+}
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.ratioList dequeueReusableCellWithIdentifier:@"cell"];
@@ -132,7 +137,7 @@
     {
         cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"cell"];
     }
-	cell.textLabel.text = [data objectAtIndex:indexPath.row];
+    
 	return cell;
 }
 
