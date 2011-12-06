@@ -79,9 +79,9 @@ const int kCogComponent = 1;
           forComponent:(NSInteger)component
 {
     if (component == kChainWheelComponent){
-        return [NSString stringWithFormat:@"%i", row+31];
+        return [NSString stringWithFormat:@"%i-tooth", row+31];
     } else {
-        return [NSString stringWithFormat:@"%i", row+11];
+        return [NSString stringWithFormat:@"%i-tooth", row+11];
     }
 }
 

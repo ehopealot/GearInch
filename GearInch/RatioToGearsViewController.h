@@ -17,5 +17,6 @@ UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIPickerView *gearInchSelector;
 @property (nonatomic, strong) IBOutlet UITableView *ratioList;
+@property (nonatomic, strong) IBOutlet UIImageView *downArrow;
 
 @end

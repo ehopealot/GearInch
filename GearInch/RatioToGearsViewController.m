@@ -9,7 +9,7 @@
 #import "RatioToGearsViewController.h"
 
 @implementation RatioToGearsViewController
-@synthesize gearInchSelector, ratioList;
+@synthesize gearInchSelector, ratioList, downArrow;
 
 - (void)didReceiveMemoryWarning
 {
@@ -70,14 +70,14 @@
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
-    return pickerView.frame.size.width;
+    return pickerView.frame.size.width-20;
 }
 
 -(NSString*)pickerView:(UIPickerView *)pickerView 
            titleForRow:(NSInteger)row 
           forComponent:(NSInteger)component
 {
-    return [NSString stringWithFormat:@"%i", row+31];
+    return [NSString stringWithFormat:@"%i Gear Inches", row+31];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -91,6 +91,7 @@
             }
         }
     }
+
     [ratioList reloadData];
 }
 
