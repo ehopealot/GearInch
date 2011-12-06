@@ -7,9 +7,10 @@
 //
 
 #import "GearsToRatioViewController.h"
+#import "GearInchSettingsViewController.h"
 
 @implementation GearsToRatioViewController
-@synthesize sizePicker, ratioLabel;
+@synthesize sizePicker, ratioLabel, settingsViewController, contextLabel;
 
 const int kChainWheelComponent = 0;
 const int kCogComponent = 1;
@@ -25,6 +26,14 @@ const int kCogComponent = 1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (!settingsViewController){
+        settingsViewController = [[GearInchSettingsViewController alloc] 
+                                  initWithNibName:@"GearInchSettingsViewController" 
+                                  bundle:nil];
+    }
+    NSLog(@"viewDidLoad");
+    lastSelectedCogIndex = 6;
+    lastSelectedChainwheelIndex = 15;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -37,14 +46,18 @@ const int kCogComponent = 1;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
-    [self.sizePicker selectRow:6 inComponent:kCogComponent animated:NO];
-    [self.sizePicker selectRow:15 inComponent:kChainWheelComponent animated:NO];
-    CGFloat cog = 17;
-    CGFloat chainWheel = 46;
-    CGFloat ratio = (chainWheel/cog)*27.0f;
-    ratioLabel.text = [NSString stringWithFormat:@"%3.2f", ratio];
-
+    [self.sizePicker selectRow:lastSelectedCogIndex 
+                   inComponent:kCogComponent animated:NO];
+    [self.sizePicker selectRow:lastSelectedChainwheelIndex
+                   inComponent:kChainWheelComponent animated:NO];
+    CGFloat cog = lastSelectedCogIndex + 11;
+    CGFloat chainWheel = lastSelectedChainwheelIndex + 31;
+    CGFloat diameter = [settingsViewController wheelDiameter];
+    CGFloat ratio = (chainWheel/cog)*diameter;
+    ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];
+    contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -71,7 +84,7 @@ const int kCogComponent = 1;
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
-    return (pickerView.frame.size.width-40)/2;
+    return (pickerView.frame.size.width-20)/2;
 }
 
 -(NSString*)pickerView:(UIPickerView *)pickerView 
@@ -87,11 +100,14 @@ const int kCogComponent = 1;
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    
-    CGFloat cog = [self.sizePicker selectedRowInComponent:kCogComponent] + 11;
-    CGFloat chainWheel = [self.sizePicker selectedRowInComponent:kChainWheelComponent] + 31;
-    CGFloat ratio = (chainWheel/cog)*27.0f;
-    ratioLabel.text = [NSString stringWithFormat:@"%3.2f", ratio];
+    lastSelectedCogIndex = [self.sizePicker selectedRowInComponent:kCogComponent];
+    lastSelectedChainwheelIndex = [self.sizePicker selectedRowInComponent:kChainWheelComponent];
+    CGFloat cog = lastSelectedCogIndex + 11;
+    CGFloat chainWheel = lastSelectedChainwheelIndex + 31;
+    CGFloat diameter = [settingsViewController wheelDiameter];
+    CGFloat ratio = (chainWheel/cog)*diameter;
+    contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
+    ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];
 }
 
 #pragma mark UIPickerViewDataSource
@@ -119,7 +135,7 @@ const int kCogComponent = 1;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return NO;
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

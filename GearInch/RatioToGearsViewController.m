@@ -7,9 +7,10 @@
 //
 
 #import "RatioToGearsViewController.h"
+#import "GearInchSettingsViewController.h"
 
 @implementation RatioToGearsViewController
-@synthesize gearInchSelector, ratioList, downArrow;
+@synthesize gearInchSelector, ratioList, downArrow, settingsViewController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -17,12 +18,20 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    if (!settingsViewController){
+        settingsViewController = [[GearInchSettingsViewController alloc] 
+                                  initWithNibName:@"GearInchSettingsViewController" 
+                                  bundle:nil];
+    }
+
 }
 
 - (void)viewDidUnload
@@ -44,7 +53,7 @@
 {
     [super viewDidAppear:animated];
     [self.gearInchSelector selectRow:40 inComponent:0 animated:NO];
-
+    [self calculateSizesForRatio:71];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -59,7 +68,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return NO;
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark UIPickerViewDelegate
@@ -80,19 +89,29 @@
     return [NSString stringWithFormat:@"%i Gear Inches", row+31];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+-(void)calculateSizesForRatio:(int)ratio
 {
     [data removeAllObjects];
-    int ratio = row+31;
+
+    CGFloat diameter = [settingsViewController wheelDiameter];
     for (CGFloat cog = 11; cog <= 26; cog++){
         for (CGFloat chainwheel = 30; chainwheel <= 61; chainwheel ++){
-            if (abs(((chainwheel / cog) * 27 ) - ratio) < .5) {
+            if (abs(((chainwheel / cog) * diameter) - ratio) < .5) {
                 [data addObject:[NSString stringWithFormat:@"%i x %i", (int)chainwheel, (int)cog]];
             }
         }
     }
-
     [ratioList reloadData];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    
+    
+    lastSelectedRatio = row;
+    int ratio = row+31;
+    [self calculateSizesForRatio:ratio];
+
 }
 
 #pragma mark UIPickerViewDataSource
@@ -112,7 +131,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 35;
 }
 
 #pragma mark UITableViewDataSource
