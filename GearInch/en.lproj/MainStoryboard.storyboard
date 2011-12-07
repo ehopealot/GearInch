@@ -64,6 +64,7 @@
                         <outlet property="contextLabel" destination="Ffj-ge-Ney" id="LPE-lU-kwH"/>
                         <outlet property="ratioLabel" destination="Tmn-qX-pXo" id="vdK-pO-saL"/>
                         <outlet property="sizePicker" destination="QTc-r5-s6f" id="Up3-K7-6ZX"/>
+                        <outlet property="wheelSizeButton" destination="2lx-vl-EnR" id="CwE-Lr-0X1"/>
                     </connections>
                 </viewController>
             </objects>
@@ -119,6 +120,7 @@
                     <connections>
                         <outlet property="gearInchSelector" destination="dMg-em-Mbq" id="LeP-k9-GE5"/>
                         <outlet property="ratioList" destination="hWH-Vy-fom" id="RIZ-P7-siL"/>
+                        <outlet property="wheelSizeButton" destination="G60-w4-WKW" id="iHU-9o-PS0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -151,28 +153,29 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background3.png" id="RSM-7N-ISN">
-                                <rect key="frame" x="-25" y="-26" width="423" height="601"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background5.png" id="Wd8-bg-Nh5">
+                                <rect key="frame" x="-15" y="-8" width="423" height="601"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="v77-vE-arR">
-                                <rect key="frame" x="20" y="202" width="280" height="44"/>
+                                <rect key="frame" x="10" y="195" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
+                                    <segment title="650c"/>
+                                    <segment title="700c"/>
                                     <segment title="20&quot;"/>
                                     <segment title="24&quot;"/>
                                     <segment title="26&quot;"/>
-                                    <segment title="27&quot;"/>
                                     <segment title="29&quot;"/>
                                 </segments>
                                 <connections>
-                                    <action selector="wheelDiameterSelected:" destination="chX-9y-xL6" eventType="valueChanged" id="eI1-2x-pwC"/>
+                                    <action selector="rimDiameterSelected:" destination="chX-9y-xL6" eventType="valueChanged" id="DR3-sa-5pN"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wheel Diameter" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RDS-7r-bgu">
-                                <rect key="frame" x="99" y="166" width="122" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rim Diameter" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RDS-7r-bgu">
+                                <rect key="frame" x="82" y="149" width="155" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -189,10 +192,33 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tire Size" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="WAd-d2-2zn">
+                                <rect key="frame" x="111" y="304" width="96" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="iiv-mX-DVz">
+                                <rect key="frame" x="113" y="351" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="tireWidthChanged:" destination="chX-9y-xL6" eventType="valueChanged" id="cMW-jB-7o5"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23mm" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZVJ-xo-K0l">
+                                <rect key="frame" x="99" y="386" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="tireWidthLabel" destination="ZVJ-xo-K0l" id="zzd-yU-vHu"/>
+                        <outlet property="tireWidthStepper" destination="iiv-mX-DVz" id="Qik-5x-fdd"/>
                         <outlet property="wheelDiameterChooser" destination="v77-vE-arR" id="Vau-1A-tle"/>
                     </connections>
                 </viewController>
@@ -203,7 +229,7 @@
     <resources>
         <image name="background1-2.png" width="423" height="601"/>
         <image name="background2.png" width="367" height="498"/>
-        <image name="background3.png" width="423" height="601"/>
+        <image name="background5.png" width="423" height="601"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
@@ -212,7 +238,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GearInchSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="dismissSettings:" candidateClass="UIButton"/>
-                <relationship kind="action" name="wheelDiameterSelected:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="rimDiameterSelected:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="tireWidthChanged:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="tireWidthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tireWidthStepper" candidateClass="UIStepper"/>
                 <relationship kind="outlet" name="wheelDiameterChooser" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
@@ -223,6 +252,7 @@
                 <relationship kind="outlet" name="ratioLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="settingsViewController" candidateClass="UIViewController"/>
                 <relationship kind="outlet" name="sizePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="wheelSizeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="RatioToGearsViewController" superclassName="UIViewController">
@@ -232,6 +262,7 @@
                 <relationship kind="outlet" name="gearInchSelector" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="ratioList" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="settingsViewController" candidateClass="UIViewController"/>
+                <relationship kind="outlet" name="wheelSizeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
     </classes>
@@ -241,6 +272,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ve9-K5-6v7"/>
+        <segue reference="wNw-zx-4xt"/>
     </inferredMetricsTieBreakers>
 </document>

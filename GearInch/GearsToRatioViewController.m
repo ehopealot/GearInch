@@ -3,14 +3,14 @@
 //  GearInch
 //
 //  Created by Erik Hope on 12/1/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Erik Hope. All rights reserved.
 //
 
 #import "GearsToRatioViewController.h"
 #import "GearInchSettingsViewController.h"
 
 @implementation GearsToRatioViewController
-@synthesize sizePicker, ratioLabel, settingsViewController, contextLabel;
+@synthesize sizePicker, ratioLabel, settingsViewController, contextLabel, wheelSizeButton;
 
 const int kChainWheelComponent = 0;
 const int kCogComponent = 1;
@@ -58,6 +58,8 @@ const int kCogComponent = 1;
     CGFloat ratio = (chainWheel/cog)*diameter;
     ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];
     contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
+    wheelSizeButton.title = [settingsViewController wheelSettingsText];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

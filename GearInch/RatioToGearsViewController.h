@@ -3,7 +3,7 @@
 //  GearInch
 //
 //  Created by Erik Hope on 12/1/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Erik Hope. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -25,5 +25,6 @@ UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) IBOutlet UIPickerView *gearInchSelector;
 @property (nonatomic, strong) IBOutlet UITableView *ratioList;
 @property (nonatomic, strong) IBOutlet UIImageView *downArrow;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *wheelSizeButton;
 
 @end

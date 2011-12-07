@@ -3,14 +3,14 @@
 //  GearInch
 //
 //  Created by Erik Hope on 12/1/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Erik Hope. All rights reserved.
 //
 
 #import "RatioToGearsViewController.h"
 #import "GearInchSettingsViewController.h"
 
 @implementation RatioToGearsViewController
-@synthesize gearInchSelector, ratioList, downArrow, settingsViewController;
+@synthesize gearInchSelector, ratioList, downArrow, settingsViewController, wheelSizeButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,13 +46,15 @@
     [super viewWillAppear:animated];
     if (!data){
         data = [NSMutableArray array];
+        lastSelectedRatio = 40;
     }
+    wheelSizeButton.title = [settingsViewController wheelSettingsText];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.gearInchSelector selectRow:40 inComponent:0 animated:NO];
+    [self.gearInchSelector selectRow:lastSelectedRatio inComponent:0 animated:NO];
     [self calculateSizesForRatio:71];
 }
 
