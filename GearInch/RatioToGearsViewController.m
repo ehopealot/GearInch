@@ -48,7 +48,11 @@
         data = [NSMutableArray array];
         lastSelectedRatio = 40;
     }
-    wheelSizeButton.title = [settingsViewController wheelSettingsText];
+    CGRect f = self.gearInchSelector.frame;
+    self.gearInchSelector.frame = CGRectMake(f.origin.x, f.origin.y, f.size.width, 162);
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    wheelSizeButton.title = [preferences objectForKey:tireSizeTextKey];
+    diameter = [preferences floatForKey:wheelDiameterKey];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -95,7 +99,6 @@
 {
     [data removeAllObjects];
 
-    CGFloat diameter = [settingsViewController wheelDiameter];
     for (CGFloat cog = 11; cog <= 26; cog++){
         for (CGFloat chainwheel = 30; chainwheel <= 61; chainwheel ++){
             if (abs(((chainwheel / cog) * diameter) - ratio) < .5) {

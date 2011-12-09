@@ -46,6 +46,8 @@ const int kCogComponent = 1;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
     NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     [self.sizePicker selectRow:lastSelectedCogIndex 
@@ -54,11 +56,11 @@ const int kCogComponent = 1;
                    inComponent:kChainWheelComponent animated:NO];
     CGFloat cog = lastSelectedCogIndex + 11;
     CGFloat chainWheel = lastSelectedChainwheelIndex + 31;
-    CGFloat diameter = [settingsViewController wheelDiameter];
+    diameter = [preferences floatForKey:wheelDiameterKey];
     CGFloat ratio = (chainWheel/cog)*diameter;
     ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];
     contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
-    wheelSizeButton.title = [settingsViewController wheelSettingsText];
+    wheelSizeButton.title = [preferences objectForKey:tireSizeTextKey];
 
 }
 
@@ -106,7 +108,6 @@ const int kCogComponent = 1;
     lastSelectedChainwheelIndex = [self.sizePicker selectedRowInComponent:kChainWheelComponent];
     CGFloat cog = lastSelectedCogIndex + 11;
     CGFloat chainWheel = lastSelectedChainwheelIndex + 31;
-    CGFloat diameter = [settingsViewController wheelDiameter];
     CGFloat ratio = (chainWheel/cog)*diameter;
     contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
     ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];

@@ -12,12 +12,6 @@
 {
 }
 
-
-
--(CGFloat) wheelDiameter;
--(NSString *) wheelSettingsText;
-
-
 -(IBAction) dismissSettings:(UIButton*)sender;
 -(IBAction) rimDiameterSelected:(UISegmentedControl*)wheelDiameterControl;
 -(IBAction) tireWidthChanged:(UIStepper*)stepper;
@@ -28,4 +22,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *tireWidthLabel;
 @property (strong, nonatomic) IBOutlet UIStepper *tireWidthStepper;
 
+
+extern NSString *rimDiameterKey; 
+extern NSString *roadTireWidthKey;
+extern NSString *mtbTireWidthKey; 
+extern NSString *tireSizeTextKey; 
+extern NSString *wheelDiameterKey;
+extern CGFloat mmToInchMultiplier;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GearInchSettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -15,6 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults floatForKey:roadTireWidthKey] == 0){
+        [defaults registerDefaults:[NSDictionary 
+                                    dictionaryWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithInt:1],
+                                    [NSNumber numberWithFloat:23.0],[NSNumber numberWithFloat:2.0],@"700x23mm",
+                                                           [NSNumber numberWithFloat:688.0*mmToInchMultiplier],nil]
+                                    forKeys:[NSArray arrayWithObjects:rimDiameterKey, roadTireWidthKey, mtbTireWidthKey,
+                                             tireSizeTextKey,wheelDiameterKey,nil]]];
+    }    
     return YES;
 }
 							

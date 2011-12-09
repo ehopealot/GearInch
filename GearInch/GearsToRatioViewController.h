@@ -11,9 +11,9 @@
 
 @interface GearsToRatioViewController : UIViewController
 {
-    GearInchSettingsViewController *settingsViewController;
     int lastSelectedCogIndex;
     int lastSelectedChainwheelIndex;
+    CGFloat diameter;
 }
 
 

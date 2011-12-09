@@ -17,6 +17,7 @@ UITableViewDataSource, UITableViewDelegate>
     NSMutableArray *data;
     GearInchSettingsViewController *settingsViewController;
     int lastSelectedRatio;
+    CGFloat diameter;
 }
 
 -(void)calculateSizesForRatio:(int)ratio;
