@@ -22,6 +22,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *ratioLabel;
 @property (strong, nonatomic) IBOutlet UILabel *contextLabel;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *wheelSizeButton;
-
+@property (nonatomic, strong) IBOutlet UIView *pickerBackground;
 
 @end

@@ -30,6 +30,18 @@
 		1B4C5527148875D100288A15 /* Launch-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C5526148875D100288A15 /* Launch-Icon.png */; };
 		1B4C5529148875DF00288A15 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C5528148875DF00288A15 /* Default@2x.png */; };
 		1B4C552B148875EC00288A15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C552A148875EC00288A15 /* Default.png */; };
+		1BD68DC4148A910700B79198 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DC2148A910700B79198 /* background1.png */; };
+		1BD68DC5148A910700B79198 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DC3148A910700B79198 /* background2.png */; };
+		1BD68DC8148AADEE00B79198 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DC7148AADEE00B79198 /* downArrow.png */; };
+		1BD68DCA148BE7A000B79198 /* background1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DC9148BE7A000B79198 /* background1-2.png */; };
+		1BD68DCE148DBB2800B79198 /* GearInchSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD68DCC148DBB2700B79198 /* GearInchSettingsViewController.m */; };
+		1BD68DD1148DC35B00B79198 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DD0148DC35B00B79198 /* background3.png */; };
+		1BD68DD6148F16A000B79198 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DD5148F16A000B79198 /* background4.png */; };
+		1BD68DD8148F16E300B79198 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DD7148F16E300B79198 /* background5.png */; };
+		1BD68DDA148F276200B79198 /* background2-lightened.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DD9148F276200B79198 /* background2-lightened.png */; };
+		1BD68DDC1491BAC700B79198 /* background1-new-colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DDB1491BAC600B79198 /* background1-new-colors.png */; };
+		1BD68DE01491BD2B00B79198 /* background1-2-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DDF1491BD2B00B79198 /* background1-2-2.png */; };
+		1BD68DE41491C2B300B79198 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DE31491C2B300B79198 /* gradient.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +66,11 @@
 		1B4C54E91488730500288A15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B4C54EA1488730500288A15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1B4C54ED1488730500288A15 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1B4C54EF1488730500288A15 /* GearsToRatioViewController.h */ = {isa = PBXFileReference; path = GearsToRatioViewController.h; sourceTree = "<group>"; };
+		1B4C54EF1488730500288A15 /* GearsToRatioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GearsToRatioViewController.h; sourceTree = "<group>"; };
 		1B4C54F01488730500288A15 /* GearsToRatioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GearsToRatioViewController.m; sourceTree = "<group>"; };
 		1B4C54F21488730500288A15 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1B4C54F41488730500288A15 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		1B4C54F61488730500288A15 /* RatioToGearsViewController.h */ = {isa = PBXFileReference; path = RatioToGearsViewController.h; sourceTree = "<group>"; };
+		1B4C54F61488730500288A15 /* RatioToGearsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatioToGearsViewController.h; sourceTree = "<group>"; };
 		1B4C54F71488730500288A15 /* RatioToGearsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatioToGearsViewController.m; sourceTree = "<group>"; };
 		1B4C54F91488730500288A15 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		1B4C54FB1488730500288A15 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -73,6 +85,19 @@
 		1B4C5526148875D100288A15 /* Launch-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-Icon.png"; sourceTree = "<group>"; };
 		1B4C5528148875DF00288A15 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1B4C552A148875EC00288A15 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1BD68DC2148A910700B79198 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		1BD68DC3148A910700B79198 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		1BD68DC7148AADEE00B79198 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		1BD68DC9148BE7A000B79198 /* background1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background1-2.png"; sourceTree = "<group>"; };
+		1BD68DCB148DBB2700B79198 /* GearInchSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GearInchSettingsViewController.h; sourceTree = "<group>"; };
+		1BD68DCC148DBB2700B79198 /* GearInchSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GearInchSettingsViewController.m; sourceTree = "<group>"; };
+		1BD68DD0148DC35B00B79198 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
+		1BD68DD5148F16A000B79198 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background4.png; sourceTree = "<group>"; };
+		1BD68DD7148F16E300B79198 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
+		1BD68DD9148F276200B79198 /* background2-lightened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background2-lightened.png"; sourceTree = "<group>"; };
+		1BD68DDB1491BAC600B79198 /* background1-new-colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background1-new-colors.png"; sourceTree = "<group>"; };
+		1BD68DDF1491BD2B00B79198 /* background1-2-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background1-2-2.png"; sourceTree = "<group>"; };
+		1BD68DE31491C2B300B79198 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +159,17 @@
 		1B4C54E01488730500288A15 /* GearInch */ = {
 			isa = PBXGroup;
 			children = (
+				1BD68DE31491C2B300B79198 /* gradient.png */,
+				1BD68DDF1491BD2B00B79198 /* background1-2-2.png */,
+				1BD68DDB1491BAC600B79198 /* background1-new-colors.png */,
+				1BD68DD9148F276200B79198 /* background2-lightened.png */,
+				1BD68DD7148F16E300B79198 /* background5.png */,
+				1BD68DD5148F16A000B79198 /* background4.png */,
+				1BD68DD0148DC35B00B79198 /* background3.png */,
+				1BD68DC9148BE7A000B79198 /* background1-2.png */,
+				1BD68DC7148AADEE00B79198 /* downArrow.png */,
+				1BD68DC2148A910700B79198 /* background1.png */,
+				1BD68DC3148A910700B79198 /* background2.png */,
 				1B4C5526148875D100288A15 /* Launch-Icon.png */,
 				1B4C551E1488755000288A15 /* Regular-Icon.png */,
 				1B4C551A148874AA00288A15 /* Retina-Icon.png */,
@@ -149,6 +185,8 @@
 				1B4C54F91488730500288A15 /* second.png */,
 				1B4C54FB1488730500288A15 /* second@2x.png */,
 				1B4C54E11488730500288A15 /* Supporting Files */,
+				1BD68DCB148DBB2700B79198 /* GearInchSettingsViewController.h */,
+				1BD68DCC148DBB2700B79198 /* GearInchSettingsViewController.m */,
 			);
 			path = GearInch;
 			sourceTree = "<group>";
@@ -264,6 +302,17 @@
 				1B4C5527148875D100288A15 /* Launch-Icon.png in Resources */,
 				1B4C5529148875DF00288A15 /* Default@2x.png in Resources */,
 				1B4C552B148875EC00288A15 /* Default.png in Resources */,
+				1BD68DC4148A910700B79198 /* background1.png in Resources */,
+				1BD68DC5148A910700B79198 /* background2.png in Resources */,
+				1BD68DC8148AADEE00B79198 /* downArrow.png in Resources */,
+				1BD68DCA148BE7A000B79198 /* background1-2.png in Resources */,
+				1BD68DD1148DC35B00B79198 /* background3.png in Resources */,
+				1BD68DD6148F16A000B79198 /* background4.png in Resources */,
+				1BD68DD8148F16E300B79198 /* background5.png in Resources */,
+				1BD68DDA148F276200B79198 /* background2-lightened.png in Resources */,
+				1BD68DDC1491BAC700B79198 /* background1-new-colors.png in Resources */,
+				1BD68DE01491BD2B00B79198 /* background1-2-2.png in Resources */,
+				1BD68DE41491C2B300B79198 /* gradient.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +351,7 @@
 				1B4C54EB1488730500288A15 /* AppDelegate.m in Sources */,
 				1B4C54F11488730500288A15 /* GearsToRatioViewController.m in Sources */,
 				1B4C54F81488730500288A15 /* RatioToGearsViewController.m in Sources */,
+				1BD68DCE148DBB2800B79198 /* GearInchSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +521,7 @@
 				1B4C55161488730600288A15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B4C55171488730600288A15 /* Build configuration list for PBXNativeTarget "GearInchTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +530,7 @@
 				1B4C55191488730600288A15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

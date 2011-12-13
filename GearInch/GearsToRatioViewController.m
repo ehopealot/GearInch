@@ -8,9 +8,12 @@
 
 #import "GearsToRatioViewController.h"
 #import "GearInchSettingsViewController.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation GearsToRatioViewController
-@synthesize sizePicker, ratioLabel, settingsViewController, contextLabel, wheelSizeButton;
+@synthesize sizePicker, ratioLabel, 
+settingsViewController, contextLabel, wheelSizeButton, pickerBackground;
 
 const int kChainWheelComponent = 0;
 const int kCogComponent = 1;
@@ -61,6 +64,11 @@ const int kCogComponent = 1;
     ratioLabel.text = [NSString stringWithFormat:@"%3.0f", ratio];
     contextLabel.text = [NSString stringWithFormat:@"The Gear-Inch Ratio for %2.0fx%2.0f is:", chainWheel, cog];
     wheelSizeButton.title = [preferences objectForKey:tireSizeTextKey];
+    pickerBackground.clipsToBounds = YES;
+    pickerBackground.layer.cornerRadius = 10.0;
+    pickerBackground.layer.shadowRadius = 2.0;
+    pickerBackground.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+    pickerBackground.layer.shadowOpacity = 0.5;
 
 }
 
@@ -83,12 +91,12 @@ const int kCogComponent = 1;
 #pragma mark UIPickerViewDelegate
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return 40.0f;
+    return 40.0;
 }
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
-    return (pickerView.frame.size.width-20)/2;
+    return (pickerView.frame.size.width-22)/2;
 }
 
 -(NSString*)pickerView:(UIPickerView *)pickerView 

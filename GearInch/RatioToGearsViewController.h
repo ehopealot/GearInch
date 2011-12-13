@@ -27,5 +27,7 @@ UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) IBOutlet UITableView *ratioList;
 @property (nonatomic, strong) IBOutlet UIImageView *downArrow;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *wheelSizeButton;
+@property (nonatomic, strong) IBOutlet UIView *pickerBackground;
+
 
 @end
