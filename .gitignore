@@ -2,7 +2,7 @@ build/*
 
 *~.nib
 *.swp
-
+*~
 .DS_Store
 
 *.mod1

@@ -41,6 +41,7 @@ static NSArray *rimDiameterTexts = nil;
         tireWidthText = [NSString stringWithFormat:@"%2.0fmm", roadTireWidth];
         tireWidthStepper.minimumValue = 18;
         tireWidthStepper.maximumValue = 60;
+        tireWidthStepper.stepValue = 1;
         tireWidthStepper.value = roadTireWidth;
     } else {
         tireWidthText = [NSString stringWithFormat:@"%1.1f\"", mtbTireWidth];

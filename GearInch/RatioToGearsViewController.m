@@ -108,7 +108,9 @@ pickerBackground;
 
     for (CGFloat cog = 11; cog <= 26; cog++){
         CGFloat chainwheel = round((cog*ratio)/diameter);
-        [data addObject:[NSString stringWithFormat:@"%i x %i", (int)chainwheel, (int)cog]];
+        if (chainwheel < 62){
+            [data addObject:[NSString stringWithFormat:@"%i x %i", (int)chainwheel, (int)cog]];
+        }
     }
     [ratioList reloadData];
 }
