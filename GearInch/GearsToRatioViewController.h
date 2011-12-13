@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class GearInchSettingsViewController;
 
 @interface GearsToRatioViewController : UIViewController
@@ -16,6 +17,7 @@
     CGFloat diameter;
 }
 
+-(IBAction)infoButtonClicked:(UIButton*)infoButton;
 
 @property (strong, nonatomic) IBOutlet UIViewController *settingsViewController;
 @property (strong, nonatomic) IBOutlet UIPickerView *sizePicker;

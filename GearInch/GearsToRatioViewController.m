@@ -142,6 +142,13 @@ const int kCogComponent = 1;
 }
 
 
+-(void)infoButtonClicked:(UIButton *)infoButton
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GearInch\nCopyright (c) 2011 Erik Hope."
+                                                    message:@"hi" delegate:nil cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

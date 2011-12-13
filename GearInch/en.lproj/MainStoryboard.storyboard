@@ -61,6 +61,23 @@
                                                 <segue destination="chX-9y-xL6" kind="modal" id="wNw-zx-4xt"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" id="My2-qa-YlM">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="o6W-hB-KBx">
+                                                <rect key="frame" x="297" y="12" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="sDu-p0-Dz2" kind="modal" id="Yaj-aO-ijs"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -73,6 +90,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sizes to Gear Inches" image="first.png" id="7"/>
                     <toolbarItems/>
@@ -133,6 +151,26 @@
                                         <barButtonItem key="leftBarButtonItem" title="Wheel Size" id="G60-w4-WKW">
                                             <connections>
                                                 <segue destination="chX-9y-xL6" kind="modal" id="Ve9-K5-6v7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" id="m2A-Qv-AUo">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="c1u-VC-em4">
+                                                <rect key="frame" x="297" y="12" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="sDu-p0-Dz2" kind="modal" id="y2v-P5-fKl"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <segue destination="sDu-p0-Dz2" kind="modal" id="o94-0y-rqQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -256,19 +294,83 @@
                         <outlet property="wheelDiameterChooser" destination="v77-vE-arR" id="Vau-1A-tle"/>
                     </connections>
                 </viewController>
+                <barButtonItem style="plain" id="rgw-z0-WuU">
+                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="QOL-5W-6Vt">
+                        <rect key="frame" x="297" y="12" width="18" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1144" y="-138"/>
+        </scene>
+        <scene sceneID="ZQO-KN-L9I">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vq-b3-xRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="sDu-p0-Dz2" customClass="GearInchAboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hRM-Y6-Naa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background6.png" id="uqo-7a-CjO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" id="SUU-DY-IRS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="About GearInch" id="lkB-C0-1wr">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="u2Q-0t-1Y7">
+                                            <connections>
+                                                <action selector="dismissAbout:" destination="3Vq-b3-xRT" id="PmP-KM-oWC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="B1q-kQ-rKD">
+                                <rect key="frame" x="40" y="77" width="240" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textBox" destination="B1q-kQ-rKD" id="Vuj-q6-7Sx"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1152" y="498"/>
         </scene>
     </scenes>
     <resources>
         <image name="background1-2-2.png" width="423" height="601"/>
         <image name="background1-2.png" width="423" height="601"/>
         <image name="background5.png" width="423" height="601"/>
+        <image name="background6.png" width="354" height="561"/>
         <image name="first.png" width="30" height="12"/>
         <image name="gradient.png" width="280" height="40"/>
         <image name="second.png" width="30" height="12"/>
     </resources>
     <classes>
+        <class className="GearInchAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GearInchAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissAbout:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textBox" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="GearInchSettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GearInchSettingsViewController.h"/>
             <relationships>
@@ -283,6 +385,7 @@
         <class className="GearsToRatioViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GearsToRatioViewController.h"/>
             <relationships>
+                <relationship kind="action" name="infoButtonClicked:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="contextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pickerBackground" candidateClass="UIView"/>
                 <relationship kind="outlet" name="ratioLabel" candidateClass="UILabel"/>
@@ -294,6 +397,7 @@
         <class className="RatioToGearsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatioToGearsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="infoButtonClicked:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="downArrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="gearInchSelector" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="pickerBackground" candidateClass="UIView"/>
@@ -309,6 +413,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="y2v-P5-fKl"/>
         <segue reference="Ve9-K5-6v7"/>
     </inferredMetricsTieBreakers>
 </document>

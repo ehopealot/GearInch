@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0FDCC014970DCC00B27BEB /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FDCBF14970DCC00B27BEB /* background6.png */; };
+		1B0FDCC31497111C00B27BEB /* GearInchAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FDCC21497111C00B27BEB /* GearInchAboutViewController.m */; };
 		1B4C54DB1488730500288A15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C54DA1488730500288A15 /* UIKit.framework */; };
 		1B4C54DD1488730500288A15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C54DC1488730500288A15 /* Foundation.framework */; };
 		1B4C54DF1488730500288A15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C54DE1488730500288A15 /* CoreGraphics.framework */; };
@@ -48,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0FDCBF14970DCC00B27BEB /* background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background6.png; sourceTree = "<group>"; };
+		1B0FDCC11497111C00B27BEB /* GearInchAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GearInchAboutViewController.h; sourceTree = "<group>"; };
+		1B0FDCC21497111C00B27BEB /* GearInchAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GearInchAboutViewController.m; sourceTree = "<group>"; };
 		1B4C54D61488730500288A15 /* GearInch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GearInch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4C54DA1488730500288A15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1B4C54DC1488730500288A15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +150,7 @@
 		1B4C54E01488730500288A15 /* GearInch */ = {
 			isa = PBXGroup;
 			children = (
+				1B0FDCBF14970DCC00B27BEB /* background6.png */,
 				1BD68DE31491C2B300B79198 /* gradient.png */,
 				1BD68DDF1491BD2B00B79198 /* background1-2-2.png */,
 				1BD68DD7148F16E300B79198 /* background5.png */,
@@ -166,6 +172,8 @@
 				1B4C54E11488730500288A15 /* Supporting Files */,
 				1BD68DCB148DBB2700B79198 /* GearInchSettingsViewController.h */,
 				1BD68DCC148DBB2700B79198 /* GearInchSettingsViewController.m */,
+				1B0FDCC11497111C00B27BEB /* GearInchAboutViewController.h */,
+				1B0FDCC21497111C00B27BEB /* GearInchAboutViewController.m */,
 			);
 			path = GearInch;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				1BD68DD8148F16E300B79198 /* background5.png in Resources */,
 				1BD68DE01491BD2B00B79198 /* background1-2-2.png in Resources */,
 				1BD68DE41491C2B300B79198 /* gradient.png in Resources */,
+				1B0FDCC014970DCC00B27BEB /* background6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				1B4C54F11488730500288A15 /* GearsToRatioViewController.m in Sources */,
 				1B4C54F81488730500288A15 /* RatioToGearsViewController.m in Sources */,
 				1BD68DCE148DBB2800B79198 /* GearInchSettingsViewController.m in Sources */,
+				1B0FDCC31497111C00B27BEB /* GearInchAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

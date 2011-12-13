@@ -120,6 +120,7 @@ pickerBackground;
     lastSelectedRatio = row;
     int ratio = row+31;
     [self calculateSizesForRatio:ratio];
+
     [ratioList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] 
                      atScrollPosition:UITableViewScrollPositionNone animated:YES];
 }
@@ -165,10 +166,20 @@ pickerBackground;
     
     if (cell == nil) 
     {
-        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+
     }
     
 	return cell;
 }
+
+-(void)infoButtonClicked:(UIButton *)infoButton
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GearInch"
+                                                    message:@"hi" delegate:nil cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

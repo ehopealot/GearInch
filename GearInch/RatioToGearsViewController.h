@@ -21,6 +21,7 @@ UITableViewDataSource, UITableViewDelegate>
 }
 
 -(void)calculateSizesForRatio:(int)ratio;
+-(IBAction)infoButtonClicked:(UIButton *)infoButton;
 
 @property (strong, nonatomic) IBOutlet UIViewController *settingsViewController;
 @property (nonatomic, strong) IBOutlet UIPickerView *gearInchSelector;
