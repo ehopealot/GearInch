@@ -37,6 +37,7 @@
 		1BD68DD8148F16E300B79198 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DD7148F16E300B79198 /* background5.png */; };
 		1BD68DE01491BD2B00B79198 /* background1-2-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DDF1491BD2B00B79198 /* background1-2-2.png */; };
 		1BD68DE41491C2B300B79198 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD68DE31491C2B300B79198 /* gradient.png */; };
+		1BF8019914BD262400932F7F /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF8019814BD262400932F7F /* iRate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		1BD68DD7148F16E300B79198 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
 		1BD68DDF1491BD2B00B79198 /* background1-2-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background1-2-2.png"; sourceTree = "<group>"; };
 		1BD68DE31491C2B300B79198 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		1BF8019714BD262400932F7F /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		1BF8019814BD262400932F7F /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 			children = (
 				1B4C552A148875EC00288A15 /* Default.png */,
 				1B4C5528148875DF00288A15 /* Default@2x.png */,
+				1BF8019614BD262400932F7F /* iRate */,
 				1B4C54E01488730500288A15 /* GearInch */,
 				1B4C55091488730600288A15 /* GearInchTests */,
 				1B4C54D91488730500288A15 /* Frameworks */,
@@ -206,6 +210,15 @@
 				1B4C550C1488730600288A15 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BF8019614BD262400932F7F /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				1BF8019714BD262400932F7F /* iRate.h */,
+				1BF8019814BD262400932F7F /* iRate.m */,
+			);
+			path = iRate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +347,7 @@
 				1B4C54F81488730500288A15 /* RatioToGearsViewController.m in Sources */,
 				1BD68DCE148DBB2800B79198 /* GearInchSettingsViewController.m in Sources */,
 				1B0FDCC31497111C00B27BEB /* GearInchAboutViewController.m in Sources */,
+				1BF8019914BD262400932F7F /* iRate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,11 +397,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1B06D428149850FF009635A3 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Hope";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Erik Hope";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		1B06D429149850FF009635A3 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Hope";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GearInch/GearInch-Prefix.pch";
+				INFOPLIST_FILE = "GearInch/GearInch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		1B06D42A149850FF009635A3 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GearInch.app/GearInch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GearInch/GearInch-Prefix.pch";
+				INFOPLIST_FILE = "GearInchTests/GearInchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		1B4C55121488730600288A15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -405,6 +487,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,9 +496,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Hope";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Erik Hope";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -423,7 +511,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -431,10 +523,19 @@
 		1B4C55151488730600288A15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Hope";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GearInch/GearInch-Prefix.pch";
 				INFOPLIST_FILE = "GearInch/GearInch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -442,10 +543,21 @@
 		1B4C55161488730600288A15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Hope";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Erik Hope";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GearInch/GearInch-Prefix.pch";
 				INFOPLIST_FILE = "GearInch/GearInch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A9E28CB8-9AED-4F8C-B509-1FC63ED58126";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -492,6 +604,7 @@
 			buildConfigurations = (
 				1B4C55121488730600288A15 /* Debug */,
 				1B4C55131488730600288A15 /* Release */,
+				1B06D428149850FF009635A3 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -501,6 +614,7 @@
 			buildConfigurations = (
 				1B4C55151488730600288A15 /* Debug */,
 				1B4C55161488730600288A15 /* Release */,
+				1B06D429149850FF009635A3 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -510,6 +624,7 @@
 			buildConfigurations = (
 				1B4C55181488730600288A15 /* Debug */,
 				1B4C55191488730600288A15 /* Release */,
+				1B06D42A149850FF009635A3 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

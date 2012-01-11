@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "iRate.h"
 #import "GearInchSettingsViewController.h"
 
 @implementation AppDelegate
@@ -25,6 +26,10 @@
                                     forKeys:[NSArray arrayWithObjects:rimDiameterKey, roadTireWidthKey, mtbTireWidthKey,
                                              tireSizeTextKey,wheelDiameterKey,nil]]];
     }    
+        
+    
+    iRate *iRateInstance = [iRate sharedInstance];
+    iRateInstance.appStoreID = 489746930;
     return YES;
 }
 							
