@@ -50,6 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    textBox.dataDetectorTypes = UIDataDetectorTypeLink;
     textBox.layer.cornerRadius = 10;
     textBox.alpha = 0.9;
     textBox.layer.borderWidth = 1.0;
@@ -57,7 +58,7 @@
     textBox.layer.shadowOpacity = 1;
     textBox.layer.shadowRadius = 10;
     textBox.layer.shadowColor = [UIColor blackColor].CGColor;
-    textBox.text = @"GearInch (c) 2011 Erik Hope \n\nWhat is a gear inch ratio? \n\nThe gear inch ratio of a bicycle is a measure of how low or high a gear is. The higher the ratio, the higher the gear, and the farther your bike travels with each rotation of the pedals. Use GearInch to determine which cog and chainwheel sizes you need to achieve your desired ratio, or to calculate what the ratio of a given cog and chainwheel is.";
+    textBox.text = @"GearInch (c) 2011 Erik Hope \n\nWhat is a gear inch ratio? \n\nThe gear inch ratio of a bicycle is a measure of how low or high a gear is. The higher the ratio, the higher the gear, and the farther your bike travels with each rotation of the pedals. Use GearInch to determine which cog and chainwheel sizes you need to achieve a particular ratio, or to calculate what the ratio of a given cog and chainwheel is. For more information see http://en.wikipedia.org/wiki/Gear_inches";
 
 
 }
